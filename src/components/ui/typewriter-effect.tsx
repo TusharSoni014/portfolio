@@ -35,8 +35,8 @@ export const TypewriterEffect = ({
           opacity: 1,
         },
         {
-          duration: 1,
-          delay: stagger(0.2),
+          duration: 0.5,
+          delay: stagger(0.1),
           ease: "easeInOut",
         }
       );
@@ -71,7 +71,7 @@ export const TypewriterEffect = ({
   return (
     <div
       className={cn(
-        "text-base sm:text-xl md:text-3xl lg:text-5xl font-bold text-center",
+        "text-base sm:text-xl md:text-3xl lg:text-5xl text-center",
         className
       )}
     >
@@ -155,7 +155,7 @@ export const TypewriterEffectSmooth = ({
         }}
       >
         <div
-          className="text-xs sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold"
+          className="text-xs sm:text-base md:text-xl lg:text:3xl xl:text-5xl"
           style={{
             whiteSpace: "nowrap",
           }}
