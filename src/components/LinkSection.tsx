@@ -10,7 +10,7 @@ const Projects = () => {
     <div>
       <p className="font-bold text-xl text-white">Projects</p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        I've Made projects ranging from Simple HTML, CSS, and JavaScript to{" "}
+        I&apos;ve Made projects ranging from Simple HTML, CSS, and JavaScript to{" "}
         <b className="font-bold text-cyan-500">ThreeJS</b> and{" "}
         <b className="font-bold text-cyan-500">AI SaaS</b>. Click the button
         below to visit my projects page.
@@ -27,9 +27,9 @@ const Skills = () => {
     <div className="p-3">
       <p className="font-bold text-xl text-white">Skills</p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        I'm a Full Stack Web Developer, with skills including, HTML, CSS,
+        I&apos;m a Full Stack Web Developer, with skills including, HTML, CSS,
         JavaScript, React... and more, Visit the skills page to view the
-        detailed information about my skills and which programming languages I'm
+        detailed information about my skills and which programming languages I&apos;m
         proficient in.
       </p>
       <Link href="/skills">
