@@ -1,42 +1,58 @@
 "use client";
 import React from "react";
 import { LayoutGrid } from "./ui/layout-grid";
+import { motion } from "framer-motion";
+import NeonBtnSecondary from "./ui/NeonBtnSecondary/NeonBtnSecondary";
+import Link from "next/link";
 
-const SkeletonOne = () => {
+const Projects = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">House in the woods</p>
-      <p className="font-normal text-base text-white"></p>
+      <p className="font-bold text-xl text-white">Projects</p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A serene and tranquil retreat, this house in the woods offers a peaceful
-        escape from the hustle and bustle of city life.
+        I&apos;ve Made projects ranging from Simple HTML, CSS, and JavaScript to{" "}
+        <b className="font-bold text-cyan-500">ThreeJS</b> and{" "}
+        <b className="font-bold text-cyan-500">AI SaaS</b>. Click the button
+        below to visit my projects page.
       </p>
+      <Link href="/projects">
+        <NeonBtnSecondary>View Projects</NeonBtnSecondary>
+      </Link>
     </div>
   );
 };
 
-const SkeletonTwo = () => {
+const Skills = () => {
   return (
-    <div>
-      <p className="font-bold text-4xl text-white">House above the clouds</p>
-      <p className="font-normal text-base text-white"></p>
+    <div className="p-3">
+      <p className="font-bold text-xl text-white">Skills</p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        Perched high above the world, this house offers breathtaking views and a
-        unique living experience. It&apos;s a place where the sky meets home,
-        and tranquility is a way of life.
+        I&apos;m a Full Stack Web Developer, with skills including, HTML, CSS,
+        JavaScript, React... and more, Visit the skills page to view the
+        detailed information about my skills and which programming languages I&apos;m
+        proficient in.
       </p>
+      <Link href="/skills">
+        <NeonBtnSecondary>View Skills</NeonBtnSecondary>
+      </Link>
     </div>
   );
 };
-const SkeletonThree = () => {
+const AboutMe = () => {
   return (
     <div>
-      <p className="font-bold text-4xl text-white">Greens all over</p>
-      <p className="font-normal text-base text-white"></p>
+      <p className="font-bold text-4xl text-white">About Me</p>
       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        A house surrounded by greenery and nature&apos;s beauty. It&apos;s the
-        perfect place to relax, unwind, and enjoy life.
+        If you wanted to know more about me and my coding journey over the
+        years, then make sure to visit the{" "}
+        <Link href="/aboutme">
+          <b className="font-bold text-cyan-500">/aboutme</b>
+        </Link>{" "}
+        by clicking the button below.
       </p>
+      <Link href="/aboutme">
+        <NeonBtnSecondary>Visit About me</NeonBtnSecondary>
+      </Link>
     </div>
   );
 };
@@ -56,7 +72,7 @@ const SkeletonFour = () => {
 const cards = [
   {
     id: 1,
-    content: <SkeletonOne />,
+    content: <Projects />,
     className: "md:col-span-2",
     title: "Projects",
     thumbnail:
@@ -64,34 +80,44 @@ const cards = [
   },
   {
     id: 2,
-    content: <SkeletonTwo />,
+    content: <Skills />,
     className: "col-span-1",
-    title: "My Skills",
+    title: "Skills",
     thumbnail:
-      "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://media.istockphoto.com/id/1176737314/photo/dots-and-lines-connection-on-abstract-technology-background.webp?b=1&s=170667a&w=0&k=20&c=4DWWJovOyI7ZdJ31zvn3xkDJar1j7cqMQE0EDW9TJO0=",
   },
   {
     id: 3,
-    content: <SkeletonThree />,
+    content: <AboutMe />,
     className: "col-span-1",
-    title: "Socials",
+    title: "About Me",
     thumbnail:
-      "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://www.zavenir.com/assets/uploads/contact-us/b199c5d5ec6574afc6fc1fd0eb893dd1.jpg",
   },
   {
     id: 4,
     content: <SkeletonFour />,
     className: "md:col-span-2",
-    title: "Contact Me",
+    title: "Socials",
     thumbnail:
-      "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://img.freepik.com/premium-photo/background-famous-social-media-icons_250994-1375.jpg",
   },
 ];
 
 export default function LinkSection() {
   return (
-    <div className="h-screen py-20 w-full border-[1px] border-cyan-500 shadow-[0_0_15px_rgba(0,255,255,0.6)]">
-      <LayoutGrid cards={cards} />
-    </div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{
+        delay: 0.3,
+        duration: 0.8,
+        ease: "easeInOut",
+      }}
+    >
+      <div className="h-screen py-20 w-full border-[1px] border-cyan-500 shadow-[0_0_15px_rgba(0,255,255,0.6)] rounded-xl">
+        <LayoutGrid cards={cards} />
+      </div>
+    </motion.div>
   );
 }

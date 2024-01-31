@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-import NeonBtn from "./ui/SkillBtn/NeonBtn";
+import NeonBtn from "./ui/NeonBtn/NeonBtn";
 import Link from "next/link";
 
 const about =
@@ -9,7 +9,7 @@ const about =
 
 export default function About() {
   return (
-    <div className="h-screen w-full p-3 lg-p-0 flex justify-center items-center">
+    <div className="h-[120dvh] w-full p-3 lg-p-0 flex justify-center items-center">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -20,7 +20,7 @@ export default function About() {
         }}
         className="text-6xl w-fit text-cyan-500"
       >
-        About_me
+        Little_Intro
         <TextGenerateEffect words={about} />
         <div className="__btn_container w-full flex justify-center items-center mt-3">
           <Link href="/skills">
