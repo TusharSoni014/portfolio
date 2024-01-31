@@ -14,6 +14,10 @@ const words = [
     className: "text-green-500 dark:text-slate-400",
   },
   {
+    text: "Web",
+    className: "text-green-500 dark:text-slate-400",
+  },
+  {
     text: "Developer",
     className: "dark:text-cyan-500",
   },
@@ -23,7 +27,7 @@ export default function Hero() {
   return (
     <LampContainer className="h-[120dvh]">
       <motion.h1
-        initial={{ opacity: 0.5, y: 100 }}
+        initial={{ opacity: 0.1, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0,
