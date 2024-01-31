@@ -1,3 +1,4 @@
+
 import React from "react";
 import { LampContainer } from "./ui/lamp";
 import { motion } from "framer-motion";
@@ -14,7 +15,7 @@ const words = [
   },
   {
     text: "Developer",
-    className: "dark:text-blue-400",
+    className: "dark:text-cyan-500",
   },
 ];
 
