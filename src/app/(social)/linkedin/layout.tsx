@@ -2,15 +2,25 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Twitter",
+  title: "LinkedIn",
   description:
     "Tushar Soni is a Full stack web developer and founder of Code Soni, a programming learning platform.",
-  keywords: ["coding", "tushar soni", "tushar verma", "ubox tech", "code soni"],
+  keywords: [
+    "coding",
+    "tushar soni",
+    "tushar verma",
+    "ubox tech",
+    "code soni",
+    "linkedin",
+    "tushar verma linkedin",
+    "tushar soni linkedin",
+    "code soni linkedin",
+  ],
   openGraph: {
     type: "website",
-    description: "Tushar Verma Twitter Account",
+    description: "Tushar Verma LinkedIn Account",
     images: [
-      "https://img.freepik.com/free-vector/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?size=626&ext=jpg&ga=GA1.1.1930590658.1706618233&semt=ais",
+      "https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png",
     ],
   },
 };
