@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export default function Twitter() {
   useEffect(() => {
-    window.location.href = "https://twitter.com/TusharSoni014";
+    window.location.href = "https://github.com/tusharsoni014";
   }, []);
   return (
     <div className="p-3 flex justify-center items-center flex-col gap-3">
